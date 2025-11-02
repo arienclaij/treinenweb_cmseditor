@@ -1,0 +1,110 @@
+/* Plaats dit in: ckeditor/plugins/cmstags/styles/cmstags.css */
+
+cms-image,
+cms-gallery,
+cms-youtube,
+cms-x,
+cms-instagram {
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border: 2px dashed #999;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #333;
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+cms-image::before {
+    content: "🖼️ CMS Afbeelding";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cms-image::after {
+    content: "ID: " attr(data-imageid);
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+cms-gallery::before {
+    content: "🎨 CMS Galerij";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cms-gallery::after {
+    content: "ID: " attr(data-galleryid);
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+cms-youtube::before {
+    content: "▶️ YouTube Video";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cms-youtube::after {
+    content: "Video ID: " attr(data-videoid);
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+cms-x::before {
+    content: "🐦 X Post";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cms-x::after {
+    content: "Post ID: " attr(data-postid);
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+cms-instagram::before {
+    content: "📷 Instagram Post";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cms-instagram::after {
+    content: "Post ID: " attr(data-postid);
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Hover effect */
+cms-image:hover,
+cms-gallery:hover,
+cms-youtube:hover,
+cms-x:hover,
+cms-instagram:hover {
+    background-color: #e8e8e8;
+    border-color: #666;
+}
+
+/* Selected state */
+.cke_widget_wrapper:hover cms-image,
+.cke_widget_wrapper:hover cms-gallery,
+.cke_widget_wrapper:hover cms-youtube,
+.cke_widget_wrapper:hover cms-x,
+.cke_widget_wrapper:hover cms-instagram {
+    background-color: #d4e9ff;
+    border-color: #3399ff;
+}
